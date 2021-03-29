@@ -43,7 +43,6 @@ export function APISearch() {
             <div className="api-search">
                 <div className="form-group">
                     <div className="d-flex justify-content-stretch align-items-stretch">
-                        <label class="control-label">Gen</label>
                         <input type="number" title="Generation" 
                             className="form-control-lg mr-1" 
                             min="1" max="7" 
