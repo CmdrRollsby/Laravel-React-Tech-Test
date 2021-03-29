@@ -40,13 +40,6 @@ export function APISearch() {
 
     return (
         <div className="container my-3">
-            <h1>Pokemon Lookup</h1>
-            <p className="lead">
-                Hopefully this is what you guys are looking for! I decided to build all the logic into a React component
-                as I don't think this case really needs a lot of backend code- it can all be handled in-view 
-                asynchronously. All in all, this took me about two hours.
-            </p>
-
             <div className="api-search">
                 <div className="form-group">
                     <div className="d-flex justify-content-stretch">
@@ -76,6 +69,7 @@ export function APISearch() {
                         </div>
                     )
                 }
+                { !results.length && <p>No results for <i>{searchTerm}</i></p> }
             </div>
         </div>
     );
