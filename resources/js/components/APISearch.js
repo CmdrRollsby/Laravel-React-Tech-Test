@@ -16,8 +16,8 @@ export function APISearch() {
         setResults(searchTerm ? generationPokemon.filter(pkm => pkm.name.startsWith(searchTerm)) : generationPokemon);
     }, [searchTerm])
 
-    const updateResults = () => {
-        fetch (`https://pokeapi.co/api/v2/generation/${generation}/`)
+    const updateResults = async () => {
+        await fetch (`https://pokeapi.co/api/v2/generation/${generation}/`)
             .then(res => res.json())
             .then(pokemon => {
                 const species = pokemon.pokemon_species;
